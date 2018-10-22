@@ -1,14 +1,15 @@
 words = []
 puts ("Type in as many words as you like to add to the array. Once you're ready, enter an empty line.")
 input = gets.chomp
-words.push input
+words.push input.split
 while input.length > 0
   input = gets.chomp
-  words.push input
+  words.push input.split
 end
 words.pop
+words = words.flatten
 puts words.to_s
-#Convert all letters into numbers. Output individual words as arrays.
+# Output individual words as arrays.
 ordered_words = words.map(&:chars).map { |letters| letters.map { |letter| letter } }
 
 i = 1
