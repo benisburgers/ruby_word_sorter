@@ -1,7 +1,7 @@
 words = ["my","favorite","animals", "are", "the", "elephant", "and", "the", "antelope", "and", "the", "favela"]
 
 #Convert all letters into numbers. Output individual words as arrays.
-converted_words = words.map(&:chars).map { |letters| letters.map { |letter| letter.to_s  } }
+converted_words = words.map(&:chars).map { |letters| letters.map { |letter| letter.to_i 36 } }
 puts converted_words.to_s
 
 i = 1
