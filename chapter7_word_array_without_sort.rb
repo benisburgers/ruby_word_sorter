@@ -15,12 +15,12 @@ i = 1
 x = 0
 while i < ordered_words.length
   if ordered_words[i][x] != nil && ordered_words[i-1][x] != nil
-    if ordered_words[i][x] < ordered_words[i-1][x]
+    if ordered_words[i][x].downcase < ordered_words[i-1][x].downcase
       ordered_words[i], ordered_words[i-1] = ordered_words[i-1], ordered_words[i]
       i = 1
       x = 0
     else
-      if ordered_words[i][x] == ordered_words[i-1][x]
+      if ordered_words[i][x].downcase == ordered_words[i-1][x].downcase
         x = x + 1
       else
         i = i + 1
